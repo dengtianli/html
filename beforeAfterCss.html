@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>css</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            .demo:after {
+                content: '';
+                display: inline-block;
+                width: 0;
+                height: 0;
+                border: 8px solid transparent;
+                border-left: 8px solid #AFABAB;
+                position: relative;
+                top: 2px;
+                left: 10px;
+            }
+
+            .left,
+            .right {
+                min-height: 40px;
+                position: relative;
+                display: table;
+                text-align: center;
+                border-radius: 7px;
+                background-color: #9EEA6A;
+            }
+
+            .right {
+                /*使左右的对话框分开*/
+                top: 40px;
+                left: 60px;
+            }
+
+            .left>p,
+            .right>p {
+                /*使内容居中*/
+                display: table-cell;
+                vertical-align: middle;
+                padding: 0 10px;
+            }
+
+            .left:before,
+            .right:after {
+                /*用伪类写出小三角形*/
+                content: '';
+                display: block;
+                width: 0;
+                height: 0;
+                border: 8px solid transparent;
+                position: absolute;
+                top: 11px;
+            }
+
+            /*分别给左右两边的小三角形定位*/
+            .left:before {
+                border-right: 8px solid #9EEA6A;
+                left: -16px;
+            }
+
+            .right:after {
+                border-left: 8px solid #9EEA6A;
+                right: -16px;
+            }
+
+            .right {
+                min-height: 40px;
+                position: relative;
+                display: table;
+                text-align: center;
+                border-radius: 7px;
+                background-color: #9EEA6A;
+                border: 1px solid #736262;
+            }
+
+            .right {
+                /*使左右的对话框分开*/
+                top: 40px;
+                left: 60px;
+            }
+
+            .left>p,
+            .right>p {
+                /*使内容居中*/
+                display: table-cell;
+                vertical-align: middle;
+                padding: 0 10px;
+            }
+
+            .left:before,
+            .right:after,
+            .left:after,
+            .right:before {
+                /*用伪类写出小三角形*/
+                content: '';
+                display: block;
+                width: 0;
+                height: 0;
+                border: 8px solid transparent;
+                position: absolute;
+                top: 11px;
+            }
+
+            /*分别给左右两边的小三角形定位*/
+            .left:before {
+                border-right: 8px solid #9EEA6A;
+                left: -16px;
+            }
+
+            .left:after {
+                /*左边对话框小三角形的边框样式*/
+                border-right: 8px solid #736262;
+                left: -17px;
+                z-index: -1;
+            }
+
+            .right:after {
+                border-left: 8px solid #9EEA6A;
+                right: -16px;
+            }
+
+            .right:before {
+                /*右边对话框小三角形的边框样式*/
+                border-left: 8px solid #736262;
+                right: -17px;
+                z-index: -1;
+            }
+
+
+
+            .part {
+                border: 1px solid #ccc;
+                display: block;
+
+            }
+
+            .part1 {
+                padding-bottom: 100px;
+                padding-left: 20px;
+            }
+
+            .title {
+                font-weight: 800;
+                margin-bottom: 10px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- 4. 用:after和:before 写一个对话框 -->
+        <div class="part part1">
+            <div class="title">:after和:before例子1</div>
+
+            <div class="left">
+                <p>吃了吗</p>
+            </div>
+            <div class="right">
+                <p>吃过了，吃了红烧排骨和酸菜鱼</p>
+            </div>
+        </div>
+        <div class="part">
+            <div class="title">:after和:before例子2</div>
+            <div class="demo">这是一个测试</div>
+        </div>
+
+
+
+    </body>
+
+</html>

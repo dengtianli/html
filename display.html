@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>BFC 对齐</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            .absolute {
+                position: absolute;
+            }
+
+            .left {
+                float: left;
+            }
+
+            .section {
+                width: 520px;
+            }
+
+            .section1 {
+                background-color: red;
+                min-height: 40px;
+            }
+
+            .section2 {
+                background-color: orange;
+                min-height: 40px;
+            }
+
+            .section3 {
+                background-color: yellow;
+                width: 100px;
+                min-height: 40px;
+            }
+
+            .section4 {
+                background-color: green;
+                min-height: 60px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="section">
+            <div class="section1">section1</div>
+            <div class="section2">section2</div>
+            <div class="section3 left">section3 float</div>
+            <div class="section4">section4</div>
+        </div>
+    </body>
+
+</html>
